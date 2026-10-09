@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog Post</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body class = "body">
+    <header class="header">
+    <nav>
+        <ul>
+            <li><a class="header-link" href="/">Create Blog</a></li>
+            <li><a class="header-link" href="/blogs">Blogs</a></li>
+
+            <li class="push-right">
+                <% if (currentUser) { %>
+
+                    <span class="welcome-message">
+                        Welcome, <%= currentName %>!
+                    </span>
+
+                    <a class= "welcome-message" href="/logout">Logout</a>
+
+                <% } else { %>
+
+                    <a href="/signin">Sign In</a>
+                    |
+                    <a href="/signup">Sign Up</a>
+
+                <% } %>
+            </li>
+        </ul>
+    </nav>
+</header>
+<h1> Start Writing Your Story! </h1>
+    <div class = signup-box>
+        <form action="/signup" method="POST">
+            <label class = "label" for="user_id">Username:</label>
+            <input type="text" name="user_id" required>
+
+            <label class = "label" for="password">Password:</label>
+            <input type="password" name="password" required>
+
+            <label class = "label" for="Name">Full Name:</label>
+            <input type="text" name="name" required>
+
+            <input class = "reg-btn" type="submit" value="Sign Up">
+        </form>
+    </div>
+    <% if (typeof error !== 'undefined') { %>
+        <div class = "error-box">
+            <p class="error"><%= error %></p>
+        </div>
+    <% } %>
+</body>

@@ -1,0 +1,266 @@
+@import url('https://googleeapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+}
+
+h1, h2, h3{
+    text-align: center;
+    font-family: 'Edu QLD Hand';
+    color: #6e4268;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.post-text {
+    color: #6e4268;
+    font-size: 20px;
+}
+
+.welcome-message {
+    color: #6e4268;
+    font-weight: 600;
+    margin-right: 15px;
+    font-size: 1.3rem;
+}
+
+.box {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #474747;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-color: #6e4268;
+    box-shadow: 0 10px 30px rgba(93, 66, 99, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.custom-box {
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #474747;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    place-items: center;   
+    min-height: 100vh;       
+    margin: 0; 
+    margin-top: 5px;
+    border: 1px; 
+    height: 95vw;
+    width: 100%;
+    max-width: 95vw;
+    border-color: purple;
+    
+}
+
+.blog-box {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 80vw;
+    border: 1px solid purple;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    }
+
+.post-name {
+    font-size: 1.5rem;
+    color: purple;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-box {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #474747;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-color: #6e4268;
+    justify-content: center;
+}
+
+
+.header {
+    background-color: #bca2ee;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.header nav {
+    width: 100%;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.header-link {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.header-link:hover {
+    color: #6e4268;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+.push-right a:hover {
+    color: #6e4268;
+    font-size: 22px;
+}
+
+.signin a:hover {
+    color: #6e4268;
+    font-size: 22px;
+}
+
+.btn-edit {
+    display: flex;
+    
+    padding: 5px 10px;
+    border: 1px solid #6e4268;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+
+}
+
+.btn-edit:hover {
+    background-color: #6e4268;
+    color: white;
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    border: 1px solid #6e4268;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #6e4268;
+    color: white;
+}
+
+.reg-btn {
+    padding: 10px 20px;
+    border: 1px solid #6e4268;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: #6e4268;
+    text-align: center;
+}
+
+.reg-btn:hover {
+    background-color: #bca2ee ;
+    color: white;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+    color:#6e4268;
+    display: flex;
+    padding: 5px;
+}
+
+.error {
+    color: purple;
+    text-align: red;
+    border: 2px solid purple;
+    padding: 15px;
+    background-color: white;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.error-box {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+}
+
+.signup-box {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #474747;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-color: #6e4268;
+    box-shadow: 0 10px 30px rgba(93, 66, 99, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog Post</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body class = "body">
+    <header class="header">
+    <nav>
+        <ul>
+            <li><a class="header-link" href="/">Create Blog</a></li>
+            <li><a class="header-link" href="/blogs">Blogs</a></li>
+
+            <li class="push-right">
+                <% if (currentUser) { %>
+
+                    <span class="welcome-message">
+                        Welcome, <%= currentName %>!
+                    </span>
+
+                    <a class= "welcome-message" href="/logout">Logout</a>
+
+                <% } else { %>
+
+                    <a href="/signin">Sign In</a>
+                    |
+                    <a href="/signup">Sign Up</a>
+
+                <% } %>
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+    <h1>Edit Post</h1>
+    <!-- Submits a POST request back to your new update route -->
+    <div class = edit-box>
+        <form action="/blogs/update/<%= id %>" method="POST">
+
+            <label for="title">Blog Title:</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                value="<%= post.title %>"
+                required
+            >
+
+            <label for="text">Blog Content:</label>
+            <textarea
+                id="text"
+                name="text"
+                required
+            ><%= post.body %></textarea>
+
+            <button type="submit">Save Changes</button>
+
+        </form>
+    </div>
+</body>
+</html>
